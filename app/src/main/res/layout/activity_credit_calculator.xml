@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreditCalculatorActivity"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="81dp"
+        android:layout_height="75dp"
+        android:text="Назад"
+        android:layout_marginStart="-6dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:src="@drawable/arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="Кредитный калькулятор"
+
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:background="@color/green">
+
+        <TextView
+            android:id="@+id/textViewLoanAmount"
+            android:layout_width="380dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/round2"
+            android:paddingLeft="25dp"
+            android:text="Сколько вам нужно"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+             />
+
+
+
+        <SeekBar
+            android:id="@+id/seekBarLoanAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-40dp"
+            android:layout_marginLeft="1dp"
+            android:max="70000"
+            android:layout_below="@id/textViewLoanAmount" />
+
+        <TextView
+            android:id="@+id/textViewSelectedAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/seekBarLoanAmount"
+            android:text="Выбранная сумма: 30000" />
+
+        <EditText
+            android:id="@+id/editTextLoanTerm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите срок кредита (в месяцах)"
+            android:layout_below="@id/textViewSelectedAmount"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:background="@drawable/shape"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Рассчитать"
+            android:textColor="@color/white"
+            android:layout_below="@id/editTextLoanTerm"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="90dp"/>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
